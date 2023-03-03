@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color:white;
+  --bg-url:url(https://i.pinimg.com/564x/af/bf/94/afbf942eb14c59e526c317daf35a6c02.jpg);
+  --stroke-color:rgba(255,255,255,0.5);
+  --surface-color:rgba(255,255,255,0.5);
+  --surface-color-hover:rgba(255,255,255,0.05);
+  --hishligh-color:rgba(255,255,255,0.2);
+}
+
+.light{
+  --text-color:black;
+  --bg-url:url(https://static7.depositphotos.com/1218074/710/i/600/depositphotos_7108766-stock-photo-purple-and-pink-background.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color:rgba(0,0,0,0.05);
+  --surface-color-hover:rgba(0,0,0,0.2);
+   --hishligh-color:rgba(0,0,0,0.1);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  background:var(--bg-url) no-repeat top center/cover;
+ 
+}
+
+#container {
+  width: 360px;
+  height: 712px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+ul {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+  padding: 24px 0;
+  
+}
+ul li a {
+  display: flex;
+  
+  align-items: center;
+  justify-content:center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  blackdorp-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.5s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid  var(--text-color);
+}
+  
+#social-links {
+  display:flex;
+  justify-content:center;
+
+  
+  padding: 24px 0;
+  font-size:24px;
+  
+}
+
+#social-links a{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  padding:16px;
+  border-radius: 50%;
+}
+
+#social-links a:hover{
+  background: var(--hishligh-color);
+  
+  transition: background 0.2s;
+  
+}
+
+#footer{
+  padding:24px 0;
+  text-align: center;
+  justify-content:center;
+  
+}
+
+#switch{
+  position:relative;
+   width:64px;
+  margin:4px auto;
+}
+
+
+#switch button{
+  width:32px;
+  height:32px;
+  background:white ;
+  border:1px solid white;
+  border-radius:50%;
+  position:absolute;
+  z-index:1;
+  transform:TranslateY(-50%);
+  top:50%;
+  left:0;
+  
+  
+}
+
+#switch span{
+  display: block;
+  width:64px;
+  height:24px;
+  background: var(--surface-color);
+  border:var(--stroke-color);
+  border-radius:9999px;
+  backdrop-filter:blur(4px);
+}
+
+.light #switch button {
+  right:0;
+  left: initial;
+  border:solid 1px black;
+}
+.light #switch {
+  border:solid 1px black;
+  border-radius: 9999px;
+}
